@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_springmvcloginexample" default="compile.module.springmvcloginexample">
+  <dirname property="module.springmvcloginexample.basedir" file="${ant.file.module_springmvcloginexample}"/>
+  
+  <property name="module.jdk.home.springmvcloginexample" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.springmvcloginexample" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.springmvcloginexample" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.springmvcloginexample" value="-encoding UTF-8 -source 13 -target 13 ${compiler.args}"/>
+  
+  <property name="springmvcloginexample.output.dir" value="${module.springmvcloginexample.basedir}/build/classes"/>
+  <property name="springmvcloginexample.testoutput.dir" value="${module.springmvcloginexample.basedir}/build/classes"/>
+  
+  <path id="springmvcloginexample.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="springmvcloginexample.module.production.classpath">
+    <path refid="${module.jdk.classpath.springmvcloginexample}"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-web-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-portlet-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/beandoc-0.7.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beandoc-0.7.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beans-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-support-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-core-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-expression-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/mysql-connector-java-5.1.11-bin.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-api-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-log4j12-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2-javadoc.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-dao-2.0.8.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-jdbc-3.2.4.RELEASE.jar"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+  </path>
+  
+  <path id="springmvcloginexample.runtime.production.module.classpath">
+    <pathelement location="${springmvcloginexample.output.dir}"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-web-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-portlet-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/beandoc-0.7.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beandoc-0.7.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beans-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-support-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-core-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-expression-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/mysql-connector-java-5.1.11-bin.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-api-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-log4j12-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2-javadoc.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-dao-2.0.8.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-jdbc-3.2.4.RELEASE.jar"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+  </path>
+  
+  <path id="springmvcloginexample.module.classpath">
+    <pathelement location="${springmvcloginexample.output.dir}"/>
+    <path refid="${module.jdk.classpath.springmvcloginexample}"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-web-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-portlet-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/beandoc-0.7.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beandoc-0.7.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beans-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-support-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-core-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-expression-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/mysql-connector-java-5.1.11-bin.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-api-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-log4j12-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2-javadoc.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-dao-2.0.8.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-jdbc-3.2.4.RELEASE.jar"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+  </path>
+  
+  <path id="springmvcloginexample.runtime.module.classpath">
+    <pathelement location="${springmvcloginexample.output.dir}"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-web-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-webmvc-portlet-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/beandoc-0.7.0.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beandoc-0.7.1.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-beans-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-context-support-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-core-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-expression-3.2.4.RELEASE.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/mysql-connector-java-5.1.11-bin.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-api-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/slf4j-log4j12-1.5.6.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2-javadoc.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-dao-2.0.8.jar"/>
+    <pathelement location="${basedir}/WebContent/WEB-INF/lib/spring-jdbc-3.2.4.RELEASE.jar"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.springmvcloginexample">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.springmvcloginexample">
+    <patternset refid="excluded.from.module.springmvcloginexample"/>
+  </patternset>
+  
+  <path id="springmvcloginexample.module.sourcepath">
+    <dirset dir="${module.springmvcloginexample.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.springmvcloginexample" depends="compile.module.springmvcloginexample.production,compile.module.springmvcloginexample.tests" description="Compile module SpringMVCloginExample"/>
+  
+  <target name="compile.module.springmvcloginexample.production" depends="register.custom.compilers" description="Compile module SpringMVCloginExample; production classes">
+    <mkdir dir="${springmvcloginexample.output.dir}"/>
+    <javac2 destdir="${springmvcloginexample.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.springmvcloginexample}/javac">
+      <compilerarg line="${compiler.args.springmvcloginexample}"/>
+      <bootclasspath refid="springmvcloginexample.module.bootclasspath"/>
+      <classpath refid="springmvcloginexample.module.production.classpath"/>
+      <src refid="springmvcloginexample.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.springmvcloginexample"/>
+    </javac2>
+    
+    <copy todir="${springmvcloginexample.output.dir}">
+      <fileset dir="${module.springmvcloginexample.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.springmvcloginexample.tests" depends="register.custom.compilers,compile.module.springmvcloginexample.production" description="compile module SpringMVCloginExample; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.springmvcloginexample" description="cleanup module">
+    <delete dir="${springmvcloginexample.output.dir}"/>
+    <delete dir="${springmvcloginexample.testoutput.dir}"/>
+  </target>
+</project>
